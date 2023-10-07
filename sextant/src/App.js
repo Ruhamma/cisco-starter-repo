@@ -7,15 +7,17 @@ function App() {
   return (
     <div className="App bg-body min-h-[100vh]">
       <Banner data="Sextant" />
-      <div className="text-left m-3 pl-3 font-semibold text-amber-950 text-3xl">
+      <div className="text-left m-3 pl-3 pt-5 font-semibold text-amber-950 text-xl sm:text-xl md:text-3xl">
         Your Ip address
       </div>
-      <CustomContainer>
-        <IpCollector ipType="ipv6" />
-      </CustomContainer>
-      <CustomContainer>
-        <IpCollector ipType="ipv4" />
-      </CustomContainer>
+      <div className="flex sm:flex-row flex-col gap-2 justify-evenly items-center m-10">
+        <CustomContainer>
+          <IpCollector ipType="ipv6" />
+        </CustomContainer>
+        <CustomContainer>
+          <IpCollector ipType="ipv4" />
+        </CustomContainer>
+      </div>
     </div>
   );
 }

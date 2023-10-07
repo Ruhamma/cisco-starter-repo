@@ -19,11 +19,11 @@ function IpCollector({ ipType }) {
     getIpAddress();
   }, [ipType]);
   return (
-    <div>
-      <div>
-        <h3>Public {ipType === "ipv6" ? "IPv6" : "IPv4"} Address</h3>
-        <p>{ipAddress}</p>
-      </div>
+    <div className="leading-loose">
+      <h3 className="font-bold text-lg ">
+        {ipType === "ipv6" ? "IPv6" : "IPv4"} Address
+      </h3>
+      <p className="text-">{ipAddress}</p>
     </div>
   );
 }
