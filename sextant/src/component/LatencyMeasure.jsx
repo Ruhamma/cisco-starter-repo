@@ -9,10 +9,9 @@ function LatencyMeasure() {
     client.onopen = () => {
       console.log("connection established");
     };
-    client.onmessage = (e) => {
-      const data = JSON.parse(e.data);
-      const packetTime=data.timestamp;
-      const currentTime = Date.now();
+    client.onmessage = (mess) => {
+      const packetTime=mess.data;
+      const currentTime =  Date.now();
       const latency = currentTime - packetTime;
       setLatency(latency);
     };
