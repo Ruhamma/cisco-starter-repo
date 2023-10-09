@@ -23,7 +23,7 @@ function IpCollector({ ipType }) {
       <h3 className="font-bold text-lg ">
         {ipType === "ipv6" ? "IPv6" : "IPv4"} Address
       </h3>
-      <p className="text-">{ipAddress}</p>
+      <p className="">{ipAddress}</p>
     </div>
   );
 }

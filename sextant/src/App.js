@@ -2,6 +2,7 @@ import "./App.css";
 import Banner from "./component/Banner";
 import CustomContainer from "./component/CustomContainer";
 import IpCollector from "./component/IpCollector";
+import LatencyMeasure from "./component/LatencyMeasure";
 
 function App() {
   return (
@@ -16,6 +17,9 @@ function App() {
         </CustomContainer>
         <CustomContainer>
           <IpCollector ipType="ipv4" />
+        </CustomContainer>
+        <CustomContainer>
+          <LatencyMeasure />
         </CustomContainer>
       </div>
     </div>
